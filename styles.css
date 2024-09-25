@@ -1,4 +1,4 @@
-/* General body styling */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #bf3131;
     color: white;
     padding: 10px;
     text-align: center;
@@ -25,7 +25,7 @@ h1, h2 {
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #bf3131;
     color: white;
     text-align: center;
     padding: 10px;
@@ -34,7 +34,7 @@ footer {
     bottom: 0;
 }
 
-/* Flexbox for gallery */
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
