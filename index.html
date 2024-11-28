@@ -3,35 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3449b9365d.js" crossorigin="anonymous"></script>
 </head>
-<nav>
-    <ul>
-        <li><a href="index.html">About Me</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-    </ul>
-</nav>
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-    </header>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Jaymon Tagudar</span></h1>
+        </div>
+    </div>
+</div>
+<!-- --------about------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="about.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a Computer Programmer,
+                    specializing in User Interface
+                    Design and Web Development. <br>I build
+                    clean, appealing, and functional
+                    interfaces that comply with the
+                    latest web standards.</p>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! My name is Jaymon. I am an IT student learning web development. Welcome to my personal website!</p>
-    </section>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web/App Development</li>
+                            <li><span>App Development</span><br>Building IOS/Android Apps</li>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        </ul>
+                    </div><div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017: Junior High</span><br>Baguio Achievers Academy</li>
+                            <li><span>2019: Senior High</span><br>University of the Cordilleras</li>
+                            <li><span>2025: College</span><br>BSIT Major in Web Technology at University of the Cordilleras</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--projects-->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src="project.png">
+                <div class="layer">
+                    <h3>Project 1</h3>
+                    <p>*Project Description*</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project.png">
+                <div class="layer">
+                    <h3>Project 2</h3>
+                    <p>*Project Description*</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project.png">
+                <div class="layer">
+                    <h3>Project 3</h3>
+                    <p>*Project Description*</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> example@contact.com</p>
+                <p><i class="fa-solid fa-phone"></i> (+63)-912-345-6789</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://mail.google.com/"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="" class="btn">DOWNLOAD CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <section>
-        <h2>My Picture</h2>
-        <img src="jay.png" alt="jay" width="300">
-    </section>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
 
-    <footer>
-        <p>&copy; 2024 Jaymon Tagudar. All rights reserved.</p>
-    </footer>
+</script>
 
-    <script src="script.js"></script> 
 </body>
 </html>
